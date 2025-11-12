@@ -6,9 +6,11 @@
     <title>Home Page</title>
 </head>
 <body>
-    {% for post in posts %}
-        <a href=""><h1>{{ post.title }}</h1></a>
-        <p>{{ post.content }}</p>
-    {% endfor %}
+        {% for post in posts %}
+            <a href=""><h1>{{forloop.counter}} - {{ post.title }}</h1></a>
+            <p>{{ post.content }}</p>
+        {% empty %}
+            <p>No posts found</p>
+        {% endfor %}
 </body>
 </html>

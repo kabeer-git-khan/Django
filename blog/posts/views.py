@@ -32,11 +32,7 @@ def home(request):
             <p>{post['content']}</p>
         </div>
         """
-<<<<<<< HEAD
     return render(request, 'posts/home.html', {"posts": posts})
-=======
-    return HttpResponse(html)
->>>>>>> b077d4330096763dfcc21e248d42d909cf35850c
 
 def post(request, id):
     valid_id = False
